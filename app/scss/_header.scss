@@ -1,18 +1,122 @@
 .header {
+    height: 35rem;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
+
+    &__bg {
+        left: -34rem;
+        position: absolute;
+        top: -73rem;
+        width: 171rem;
+    }
+
     nav {
+        margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 3rem;
+        padding: 59px 0;
+        max-width: 66rem;
+        position: relative;
     }
 
     &__logo {
-        width: auto;
+        flex: 0.15;
+
+        img {
+            width: 94px;
+        }
     }
 
     &__links {
+        flex: 0.9;
+
+        .list-item {
+            list-style-type: none;
+            display: inline-block;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            &:hover {
+                >a {
+                    text-decoration: underline;
+                }
+
+                img {
+                    transform: rotate(180deg);
+                }
+
+                .dropdown {
+                    max-height: 18.75rem;
+                }
+            }
+
+            .dropdown {
+                list-style: none;
+                padding: 0 2.0625rem;
+                position: absolute;
+                background-color: #fff;
+                border-radius: 0.5rem;
+                max-height: 0;
+                left: -1rem;
+                top: 2rem;
+                z-index: 3;
+                box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+                transition: max-height 0.3s ease;
+                width: 11.25rem;
+                overflow: hidden;
+
+                li {
+                    margin-top: 1.75rem;
+                    margin-bottom: 1.75rem;
+
+                    a {
+                        color: $veryDarkBlackBlue;
+
+                        &:hover {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+
         a {
             color: $white;
+            font-size: 14px;
+            letter-spacing: 0.75px;
+            text-shadow: 0 0 0.5px $white;
+
+            img {
+                transition: all 300ms ease-in-out;
+            }
         }
+    }
+
+    &__btns {
+        flex: 0.25;
+
+        .btn {
+            color: $white;
+            font-size: 14px;
+
+            &:first-child {
+                margin-right: 26px;
+            }
+
+            &:last-child {
+                font-size: 15px;
+                color: $lightRed;
+                background: $white;
+                font-weight: bold;
+                padding: 14px 37px;
+                border-radius: 30px;
+            }
+        }
+
     }
 }

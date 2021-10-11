@@ -13,8 +13,21 @@ body {
     margin: 0;
     padding: 0;
     font-family: $ubuntu;
+    height: 110vh;
 }
 
 a {
     text-decoration: none;
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
 }
