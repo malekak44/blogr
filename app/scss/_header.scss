@@ -1,8 +1,9 @@
 .header {
-    height: 35rem;
+    height: 35.1rem;
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
+    border-bottom-left-radius: 92px;
 
     &__bg {
         left: -34rem;
@@ -16,7 +17,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 59px 0;
+        padding: 54px 0 54px 10px;
         max-width: 66rem;
         position: relative;
     }
@@ -38,7 +39,7 @@
             position: relative;
 
             &:not(:last-child) {
-                margin-right: 30px;
+                margin-right: 26px;
             }
 
             &:hover {
@@ -92,20 +93,22 @@
             text-shadow: 0 0 0.5px $white;
 
             img {
+                margin-left: 3px;
                 transition: all 300ms ease-in-out;
             }
         }
     }
 
     &__btns {
-        flex: 0.25;
+        flex: 0.26;
 
         .btn {
             color: $white;
             font-size: 14px;
+            letter-spacing: 0.25px;
 
             &:first-child {
-                margin-right: 26px;
+                margin-right: 28px;
             }
 
             &:last-child {
@@ -113,10 +116,60 @@
                 color: $lightRed;
                 background: $white;
                 font-weight: bold;
-                padding: 14px 37px;
+                padding: 14px 36px;
                 border-radius: 30px;
             }
         }
 
+    }
+
+    &__hero {
+        color: $white;
+        text-align: center;
+        position: relative;
+        margin-top: 62px;
+        font-family: $overpass;
+
+        h1 {
+            font-size: 56px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 200;
+            letter-spacing: 0.4px;
+            margin: 14px auto 42px;
+        }
+
+        &__btns {
+            font-family: $ubuntu;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .btn {
+                width: 128px;
+                height: 45px;
+                font-weight: bold;
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+
+                &:first-child {
+                    background: $white;
+                    color: $lightRed;
+                    border: 1px solid transparent;
+                    margin-right: 16px;
+                }
+
+                &:last-child {
+                    color: $white;
+                    border: 1px solid $white;
+                }
+            }
+        }
     }
 }
