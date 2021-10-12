@@ -11,11 +11,17 @@
 
 <body>
   <header class="header">
-    <img class="header__bg" src="images/bg-pattern-intro.svg" alt="header__bg">
     <nav>
       <div class="header__logo">
         <img src="images/logo.svg" alt="logo">
       </div>
+
+      <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
       <ul class="header__links hide-for-mobile">
         <li class="list-item">
           <a href="#">Product <img src="images/icon-arrow-light.svg" alt="arrow-light"></a>
@@ -45,13 +51,48 @@
           </ul>
         </li>
       </ul>
+
       <div class="header__btns hide-for-mobile">
         <a href="#" class="btn">Login</a>
         <a href="#" class="btn">Sign Up</a>
       </div>
-      <div class="header__menu hide-for-desktop">
 
-      </div>
+      <ul class="header__menu has-fade hide-for-desktop">
+        <li class="list-item">
+          <a href="#">Product <img src="images/icon-arrow-dark.svg" alt="arrow-dark"></a>
+          <ul class="dropdown">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </li>
+        <li class="list-item">
+          <a href="#">Company <img src="images/icon-arrow-dark.svg" alt="arrow-dark"></a>
+          <ul class="dropdown">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </li>
+        <li class="list-item">
+          <a href="#">Connect <img src="images/icon-arrow-dark.svg" alt="arrow-dark"></a>
+          <ul class="dropdown">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </li>
+        <hr>
+        <li class="list-item">
+          <a href="#">Login</a>
+        </li>
+        <li class="list-item">
+          <a href="#" class="btn">Sign Up</a>
+        </li>
+      </ul>
     </nav>
 
     <section class="header__hero">
@@ -113,6 +154,8 @@
   Newsletter
   LinkedIn
   -->
+
+  <script src="app/js/script.js"></script>
 </body>
 
 </html>

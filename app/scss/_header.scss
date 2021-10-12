@@ -1,32 +1,63 @@
 .header {
-    height: 35.1rem;
+    height: 37.2rem;
     position: relative;
-    overflow: hidden;
+    border-bottom-left-radius: 6.5rem;
     background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
-    border-bottom-left-radius: 92px;
 
-    &__bg {
-        left: -34rem;
-        position: absolute;
-        top: -73rem;
-        width: 171rem;
+    @include breakpoint-up(large) {
+        height: 35.1rem;
+        border-bottom-left-radius: 5.75rem;
+        background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+    }
+
+    .dropdown {
+        z-index: 3;
+        max-height: 0;
+        overflow: hidden;
+        list-style: none;
+        padding: 0 2.0625rem;
+        transition: all 0.3s ease;
+    }
+
+    &.open {
+        .header__toggle {
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
     }
 
     nav {
         margin: auto;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 54px 0 54px 10px;
         max-width: 66rem;
         position: relative;
+        align-items: center;
+        padding: 3.4375rem 1.5rem;
+        justify-content: space-between;
+
+        @include breakpoint-up(large) {
+            padding: 3.375rem 0 3.375rem 0.625rem;
+        }
     }
 
     &__logo {
         flex: 0.15;
 
         img {
-            width: 94px;
+            width: 5rem;
+
+            @include breakpoint-up(large) {
+                width: 5.875rem;
+            }
         }
     }
 
@@ -34,12 +65,12 @@
         flex: 0.9;
 
         .list-item {
-            list-style-type: none;
-            display: inline-block;
             position: relative;
+            display: inline-block;
+            list-style-type: none;
 
             &:not(:last-child) {
-                margin-right: 26px;
+                margin-right: 1.625rem;
             }
 
             &:hover {
@@ -57,19 +88,13 @@
             }
 
             .dropdown {
-                list-style: none;
-                padding: 0 2.0625rem;
-                position: absolute;
-                background-color: #fff;
-                border-radius: 0.5rem;
-                max-height: 0;
-                left: -1rem;
                 top: 2rem;
-                z-index: 3;
-                box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
-                transition: max-height 0.3s ease;
+                left: -1rem;
                 width: 11.25rem;
-                overflow: hidden;
+                position: absolute;
+                background: $white;
+                border-radius: 0.5rem;
+                box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
 
                 li {
                     margin-top: 1.75rem;
@@ -88,7 +113,7 @@
 
         a {
             color: $white;
-            font-size: 14px;
+            font-size: 0.875rem;
             letter-spacing: 0.75px;
             text-shadow: 0 0 0.5px $white;
 
@@ -104,65 +129,178 @@
 
         .btn {
             color: $white;
-            font-size: 14px;
+            font-size: 0.875rem;
             letter-spacing: 0.25px;
 
             &:first-child {
-                margin-right: 28px;
+                margin-right: 1.75rem;
             }
 
             &:last-child {
-                font-size: 15px;
                 color: $lightRed;
-                background: $white;
                 font-weight: bold;
-                padding: 14px 36px;
+                background: $white;
                 border-radius: 30px;
+                font-size: 0.9375rem;
+                padding: 0.875rem 2.25rem;
             }
         }
 
+    }
+
+    &__toggle {
+        >span {
+            width: 31px;
+            height: 2px;
+            display: block;
+            background-color: $white;
+            transform-origin: 4px 1px;
+            transition: all 300ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+    &__menu {
+        left: 50%;
+        z-index: 1;
+        top: 6.75rem;
+        background: $white;
+        position: absolute;
+        border-radius: 5px;
+        font-family: $overpass;
+        width: calc(100% - 3rem);
+        transform: translateX(-50%);
+        padding: 2rem 1.625rem 10px;
+        box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+
+        .list-item {
+            list-style: none;
+            padding-bottom: 1.25rem;
+
+            a {
+                display: flex;
+                font-weight: 600;
+                align-items: center;
+                font-size: 1.0875rem;
+                color: $veryDarkBlue;
+                justify-content: center;
+
+                img {
+                    margin-left: 0.5rem;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            .dropdown {
+                margin-top: 1rem;
+                border-radius: 5px;
+                background: #EFEFF1;
+
+                a {
+                    font-size: 15.5px;
+                    margin-bottom: 1rem;
+                    color: $veryDarkBlue !important;
+                }
+            }
+
+            .btn {
+                width: 8.5rem;
+                color: $white;
+                margin: 0 auto;
+                padding-top: 3px;
+                height: 2.8125rem;
+                border-radius: 30px;
+                font-size: 1rem !important;
+                margin-bottom: 0px !important;
+                background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+            }
+
+            &:hover {
+                a {
+                    color: $grayishBlue;
+                }
+
+                img {
+                    transform: rotate(180deg);
+                }
+
+                .dropdown {
+                    max-height: 18rem;
+                    padding: 1.5rem 2.0625rem 0.375rem;
+                }
+            }
+        }
+
+        hr {
+            margin-bottom: 1.8rem;
+            border: 1px solid #EFEFF1;
+        }
     }
 
     &__hero {
         color: $white;
         text-align: center;
         position: relative;
-        margin-top: 62px;
+        padding: 0 1.875rem;
+        margin-top: 3.25rem;
         font-family: $overpass;
 
+        @include breakpoint-up(large) {
+            padding: 0;
+            margin-top: 3.875rem;
+        }
+
         h1 {
-            font-size: 56px;
             margin: 0;
+            font-size: 2.125rem;
+
+            @include breakpoint-up(large) {
+                font-size: 3.5rem;
+            }
         }
 
         p {
-            font-size: 18px;
             font-weight: 200;
+            font-size: 1.0625rem;
             letter-spacing: 0.4px;
-            margin: 14px auto 42px;
+            margin: 0.9375rem auto 2.9375rem;
+
+            @include breakpoint-up(large) {
+                font-size: 1.125rem;
+                margin: 0.875rem auto 2.625rem;
+            }
         }
 
         &__btns {
-            font-family: $ubuntu;
             display: flex;
             align-items: center;
+            font-family: $ubuntu;
             justify-content: center;
 
             .btn {
-                width: 128px;
-                height: 45px;
-                font-weight: bold;
-                border-radius: 30px;
                 display: flex;
+                font-size: 1rem;
+                width: 8.4375rem;
+                height: 2.9375rem;
+                font-weight: bold;
                 align-items: center;
+                border-radius: 30px;
                 justify-content: center;
-                font-size: 15px;
+
+                @include breakpoint-up(large) {
+                    width: 8rem;
+                    height: 2.8125rem;
+                    font-size: 0.9375rem;
+                }
 
                 &:first-child {
-                    background: $white;
                     color: $lightRed;
+                    background: $white;
+                    margin-right: 1rem;
                     border: 1px solid transparent;
-                    margin-right: 16px;
                 }
 
                 &:last-child {
