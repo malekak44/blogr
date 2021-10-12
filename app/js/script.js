@@ -1,6 +1,7 @@
 const btnHamburger = document.querySelector('#btnHamburger');
 const header = document.querySelector('.header');
 const fadeElems = document.querySelectorAll('.has-fade');
+const link = document.querySelectorAll("a");
 
 btnHamburger.addEventListener('click', function (e) {
     e.preventDefault();
@@ -19,3 +20,7 @@ btnHamburger.addEventListener('click', function (e) {
         });
     }
 });
+
+link.forEach(a => a.addEventListener("click", (e) => {
+    e.preventDefault();
+}));
