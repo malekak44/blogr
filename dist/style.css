@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;600&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600&family=Ubuntu:wght@400;500;700&display=swap");
 .has-fade {
   visibility: hidden;
 }
@@ -55,6 +55,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -395,5 +396,69 @@ h3 {
 .header__hero__btns .btn:last-child {
   color: white;
   border: 1px solid white;
+}
+
+.editor {
+  margin: 4.25rem auto;
+  position: relative;
+}
+
+.editor__heading {
+  margin: auto;
+  position: absolute;
+  font-size: 37.45px;
+  left: 50%;
+  color: #1f3f5b;
+  transform: translateX(-50%);
+  top: 4.65rem;
+  letter-spacing: -1px;
+}
+
+.editor__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor__text {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.editor__text__wrapper {
+  width: 31.25rem;
+  margin-right: 86px;
+}
+
+.editor__text__wrapper:first-child {
+  margin-top: 22px;
+}
+
+.editor__text__wrapper:last-child h2 {
+  margin-top: 54px;
+}
+
+.editor__text__wrapper h2 {
+  font-size: 26.5px;
+  color: #1f3f5b;
+}
+
+.editor__text__wrapper p {
+  line-height: 1.75;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 0.35px;
+  color: #4b5862;
+}
+
+.editor__image {
+  flex: 0.82;
+}
+
+.editor__image img {
+  width: 142%;
 }
 /*# sourceMappingURL=style.css.map */
