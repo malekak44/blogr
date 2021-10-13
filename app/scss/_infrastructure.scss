@@ -1,5 +1,5 @@
 .infrastructure {
-    background: url("../../images/bg-pattern-circles.svg") -211px -488px no-repeat,
+    background: url("../images/bg-pattern-circles.svg") -211px -488px no-repeat,
         linear-gradient(to right,
             $veryDarkGrayBlue,
             $veryDarkDesaturatedBlue);
@@ -11,6 +11,14 @@
     padding: 5.5rem 8.5rem;
     position: relative;
 
+    @include breakpoint-up(large) {
+        padding: 5.5rem 8.5rem;
+        background: url("../images/bg-pattern-circles.svg") -211px -488px no-repeat,
+            linear-gradient(to right,
+                $veryDarkGrayBlue,
+                $veryDarkDesaturatedBlue);
+    }
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -21,10 +29,14 @@
         flex: 1;
 
         img {
-            width: 521px;
+            width: 250px;
             position: absolute;
             left: 7rem;
             top: -4rem;
+
+            @include breakpoint-up(large) {
+                width: 521px;
+            }
         }
     }
 
@@ -34,8 +46,12 @@
         margin-left: 30px;
 
         h1 {
-            font-size: 35px;
+            font-size: 16px;
             margin: 14px 0 0;
+
+            @include breakpoint-up(large) {
+                font-size: 35px;
+            }
         }
 
         p {

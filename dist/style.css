@@ -85,14 +85,16 @@ h3 {
   height: 37.2rem;
   position: relative;
   border-bottom-left-radius: 6.5rem;
-  background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
+  background: url("../images/bg-pattern-intro.svg") -400px -325px no-repeat, linear-gradient(140deg, #ff8f70, #ff3d54);
+  background-size: 400%, cover;
 }
 
 @media (min-width: 64em) {
   .header {
     height: 35.1rem;
     border-bottom-left-radius: 5.75rem;
-    background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+    background: url("../images/bg-pattern-intro.svg") -408px -1254px no-repeat, linear-gradient(118deg, #ff8f70, #ff3d54);
+    background-size: 220%, cover;
   }
 }
 
@@ -546,7 +548,7 @@ h3 {
 }
 
 .infrastructure {
-  background: url("../../images/bg-pattern-circles.svg") -211px -488px no-repeat, linear-gradient(to right, #2c2d3f, #3f4164);
+  background: url("../images/bg-pattern-circles.svg") -211px -488px no-repeat, linear-gradient(to right, #2c2d3f, #3f4164);
   background-repeat: no-repeat;
   background-size: 71.5%, cover;
   border-top-right-radius: 92px;
@@ -554,6 +556,13 @@ h3 {
   width: 100%;
   padding: 5.5rem 8.5rem;
   position: relative;
+}
+
+@media (min-width: 64em) {
+  .infrastructure {
+    padding: 5.5rem 8.5rem;
+    background: url("../images/bg-pattern-circles.svg") -211px -488px no-repeat, linear-gradient(to right, #2c2d3f, #3f4164);
+  }
 }
 
 .infrastructure__wrapper {
@@ -567,10 +576,16 @@ h3 {
 }
 
 .infrastructure__image img {
-  width: 521px;
+  width: 250px;
   position: absolute;
   left: 7rem;
   top: -4rem;
+}
+
+@media (min-width: 64em) {
+  .infrastructure__image img {
+    width: 521px;
+  }
 }
 
 .infrastructure__text {
@@ -580,8 +595,14 @@ h3 {
 }
 
 .infrastructure__text h1 {
-  font-size: 35px;
+  font-size: 16px;
   margin: 14px 0 0;
+}
+
+@media (min-width: 64em) {
+  .infrastructure__text h1 {
+    font-size: 35px;
+  }
 }
 
 .infrastructure__text p {

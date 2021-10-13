@@ -2,12 +2,14 @@
     height: 37.2rem;
     position: relative;
     border-bottom-left-radius: 6.5rem;
-    background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
+    background: url("../images/bg-pattern-intro.svg") -400px -325px no-repeat, linear-gradient(140deg, #ff8f70, #ff3d54);
+    background-size: 400%, cover;
 
     @include breakpoint-up(large) {
         height: 35.1rem;
         border-bottom-left-radius: 5.75rem;
-        background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+        background: url("../images/bg-pattern-intro.svg") -408px -1254px no-repeat, linear-gradient(118deg, #ff8f70, #ff3d54);
+        background-size: 220%, cover;
     }
 
     .dropdown {
