@@ -633,4 +633,117 @@ h3 {
     font-size: 14.5px;
   }
 }
+
+.tooling {
+  margin: 3.75rem 0 2rem;
+}
+
+@media (min-width: 64em) {
+  .tooling {
+    margin: 7rem 0 2rem;
+  }
+}
+
+.tooling__container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .tooling__container {
+    text-align: left;
+    flex-direction: row;
+  }
+}
+
+.tooling__image {
+  flex: 0.8;
+}
+
+.tooling__image img {
+  width: 100%;
+  margin-left: 0;
+}
+
+@media (min-width: 64em) {
+  .tooling__image img {
+    width: 152%;
+    margin-left: -43.5%;
+  }
+}
+
+.tooling__text {
+  flex: 1;
+  width: 82%;
+}
+
+@media (min-width: 64em) {
+  .tooling__text {
+    width: auto;
+  }
+}
+
+.tooling__text__wrapper {
+  width: auto;
+  margin-left: 0;
+}
+
+@media (min-width: 64em) {
+  .tooling__text__wrapper {
+    width: 30rem;
+    margin-left: 90px;
+  }
+}
+
+.tooling__text__wrapper:first-child {
+  margin-top: 32px;
+}
+
+@media (min-width: 64em) {
+  .tooling__text__wrapper:first-child {
+    margin-top: 0;
+  }
+}
+
+.tooling__text__wrapper:last-child {
+  margin-top: 3.15rem;
+}
+
+@media (min-width: 64em) {
+  .tooling__text__wrapper:last-child {
+    margin-top: 4.5rem;
+  }
+}
+
+.tooling__text__wrapper h2 {
+  font-size: 27px;
+  color: #1f3f5b;
+}
+
+@media (min-width: 64em) {
+  .tooling__text__wrapper h2 {
+    font-size: 26.5px;
+  }
+}
+
+.tooling__text__wrapper p {
+  line-height: 1.75;
+  font-size: 15.45px;
+  font-weight: 400;
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 0.35px;
+  color: #4b5862;
+  margin-top: 0;
+}
+
+@media (min-width: 64em) {
+  .tooling__text__wrapper p {
+    margin-top: auto;
+    font-size: 15px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

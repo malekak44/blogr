@@ -1,0 +1,94 @@
+.tooling {
+    margin: 3.75rem 0 2rem;
+
+    @include breakpoint-up(large) {
+        margin: 7rem 0 2rem;
+    }
+
+    &__container {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        @include breakpoint-up(large) {
+            text-align: left;
+            flex-direction: row;
+        }
+    }
+
+    &__image {
+        flex: 0.8;
+
+        img {
+            width: 100%;
+            margin-left: 0;
+
+            @include breakpoint-up(large) {
+                width: 152%;
+                margin-left: -43.5%;
+            }
+        }
+    }
+
+    &__text {
+        flex: 1;
+        width: 82%;
+
+        @include breakpoint-up(large) {
+            width: auto;
+        }
+
+        &__wrapper {
+            width: auto;
+            margin-left: 0;
+
+            @include breakpoint-up(large) {
+                width: 30rem;
+                margin-left: 90px;
+            }
+
+            &:first-child {
+                margin-top: 32px;
+
+                @include breakpoint-up(large) {
+                    margin-top: 0;
+                }
+            }
+
+            &:last-child {
+                margin-top: 3.15rem;
+
+                @include breakpoint-up(large) {
+                    margin-top: 4.5rem;
+                }
+            }
+
+            h2 {
+                font-size: 27px;
+                color: $veryDarkBlue;
+
+                @include breakpoint-up(large) {
+                    font-size: 26.5px;
+                }
+            }
+
+            p {
+                line-height: 1.75;
+                font-size: 15.45px;
+                font-weight: 400;
+                font-family: $overpass;
+                letter-spacing: 0.35px;
+                color: $veryDarkGrayishBlue;
+                margin-top: 0;
+
+                @include breakpoint-up(large) {
+                    margin-top: auto;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
