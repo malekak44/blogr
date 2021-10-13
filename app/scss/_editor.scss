@@ -1,65 +1,126 @@
 .editor {
-    margin: 4.25rem auto;
+    margin: 6.35rem auto 5rem;
     position: relative;
 
+    @include breakpoint-up(large) {
+        margin: 4.25rem auto;
+    }
+
     &__heading {
-        margin: auto;
-        position: absolute;
-        font-size: 37.45px;
+        position: static;
+        font-size: 28px;
         left: 50%;
         color: $veryDarkBlue;
-        transform: translateX(-50%);
+        transform: translateX(0);
         top: 4.65rem;
         letter-spacing: -1px;
+        text-align: center;
+        margin: 0 0 2.5rem;
+
+        @include breakpoint-up(large) {
+            margin: auto;
+            font-size: 37.45px;
+            position: absolute;
+            transform: translateX(-50%);
+        }
     }
 
     &__container {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+        }
     }
 
     &__text {
         flex: 1;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         flex-direction: column;
 
+        @include breakpoint-up(large) {
+            align-items: flex-end;
+        }
+
         &__wrapper {
-            width: 31.25rem;
-            margin-right: 86px;
+            width: 80%;
+            margin-right: 0;
+            text-align: center;
+
+            @include breakpoint-up(large) {
+                width: 31.25rem;
+                text-align: left;
+                margin-right: 86px;
+            }
 
             &:first-child {
-                    margin-top: 22px;
+                margin-top: 22px;
+
+                h2 {
+                    margin-bottom: 12px;
+
+                    @include breakpoint-up(large) {
+                        margin-bottom: auto;
+                    }
+                }
             }
 
             &:last-child {
                 h2 {
-                    margin-top: 54px;
+                    margin-top: 28px;
+                    margin-bottom: 20px;
+
+                    @include breakpoint-up(large) {
+                        margin-top: 54px;
+                        margin-bottom: 16px;
+                    }
                 }
             }
 
             h2 {
-                font-size: 26.5px;
+                font-size: 27px;
                 color: $veryDarkBlue;
+
+                @include breakpoint-up(large) {
+                    font-size: 26.5px;
+                }
             }
 
             p {
                 line-height: 1.75;
-                font-size: 15px;
+                font-size: 15.45px;
                 font-weight: 400;
                 font-family: $overpass;
                 letter-spacing: 0.35px;
                 color: $veryDarkGrayishBlue;
+                margin-top: 0;
+
+                @include breakpoint-up(large) {
+                    margin-top: auto;
+                    font-size: 15px;
+                }
             }
         }
     }
 
     &__image {
         flex: 0.82;
+        order: -1;
+
+        @include breakpoint-up(large) {
+            order: 1;
+        }
 
         img {
-            width: 142%;
+            width: 100%;
+
+            @include breakpoint-up(large) {
+                width: 142%;
+            }
         }
     }
 }
