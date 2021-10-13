@@ -145,6 +145,12 @@
                 border-radius: 30px;
                 font-size: 0.9375rem;
                 padding: 0.875rem 2.25rem;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color: $white;
+                    background: $veryLightRed;
+                }
             }
         }
 
@@ -291,6 +297,7 @@
                 align-items: center;
                 border-radius: 30px;
                 justify-content: center;
+                transition: all 0.3s ease-in-out;
 
                 @include breakpoint-up(large) {
                     width: 8rem;
@@ -303,11 +310,21 @@
                     background: $white;
                     margin-right: 1rem;
                     border: 1px solid transparent;
+
+                    &:hover {
+                        color: $white;
+                        background: $veryLightRed;
+                    }
                 }
 
                 &:last-child {
                     color: $white;
                     border: 1px solid $white;
+
+                    &:hover {
+                        color: $veryLightRed;
+                        background: $white;
+                    }
                 }
             }
         }
